@@ -1,0 +1,448 @@
+/* 
+
+    ****    Global Styling For Template  ****
+    
+
+    // TABLE OF CONTENTS //
+
+        1 - Body
+
+        2 - Root Colors Global
+
+        3 - UI Components 
+                -> Button Default
+                -> Main Hero CTA 
+                -> Big Hollow Button
+                -> Round Button
+                -> Read More Link
+                -> Inputs & Forms
+                -> Social Media
+        4 - Typography 
+                -> Eyebrow Title Hero
+                -> Title Hero
+                -> Title Section
+                -> Title In Section
+        5 - Section 
+                
+*/
+
+/* 1 - Body */
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* 2 - Root Colors Global */
+
+:root {
+  --main-color: #003471;
+  --secondary-color: #d29449;
+  --default-color: #000000;
+  --text-color: #5a5c5f;
+  --bg-color: #c2c2c2;
+}
+
+/* 3 - UI Components  */
+
+/* -> Main Hero CTA  */
+
+.cta-btn {
+  background-color: var(--secondary-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s ease-out;
+  display: inline-block;
+}
+.cta-btn i {
+  font-size: 12px;
+  margin-left: 5px;
+}
+.cta-btn:hover {
+  color: white;
+}
+
+/* -> Big Hero Button */
+
+.big-hero-btn {
+  padding: 24px 30px;
+  border-radius: 5px;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: inline-block;
+}
+.big-hero-btn i {
+  margin-left: 15px;
+}
+.big-hero-btn:after {
+  content: "";
+  position: absolute;
+  background: var(--main-color);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.3s ease-out;
+}
+
+.big-hero-btn:hover:after {
+  top: 0;
+}
+
+/* -> Big Hollow Button */
+
+.hollow-btn {
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+  margin-top: 40px;
+  padding: 24px 30px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  display: inline-block;
+  color: var(--secondary-color);
+}
+.hollow-btn:after {
+  content: "";
+  position: absolute;
+  background: var(--secondary-color);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  transition: top 0.3s ease-out;
+}
+.hollow-btn:hover:after {
+  top: 0;
+}
+
+/* -> Round Buttons */
+
+.round-btn {
+  padding: 10px 40px;
+  border-radius: 100px;
+  background: var(--main-color);
+}
+.round-btn:hover {
+  background: var(--secondary-color);
+  transition: 0.4s ease-out;
+}
+.round-btn-secondary {
+  padding: 10px 40px;
+  border-radius: 100px;
+  background: var(--secondary-color);
+}
+.round-btn-secondary:hover {
+  background: white;
+  color: #000000;
+  transition: 0.4s ease-out;
+}
+
+/* Read More Link */
+
+.read-more-btn {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  transition: 0.4s ease-out;
+  display: inline-block;
+}
+.read-more-btn:hover {
+  color: var(--secondary-color);
+  transition: 0.4s ease-out;
+}
+
+/* Pagination Buttons */
+.pagination {
+  justify-content: center;
+  margin-top: 30px;
+}
+.pagination .page-numbers {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-decoration: none;
+  background: var(--bg-color);
+  padding: 10px 15px;
+  margin: 0 5px;
+  color: white;
+}
+.pagination .current,
+.pagination .page-numbers:hover {
+  background: var(--main-color);
+}
+
+/* -> Inputs & Forms */
+
+input::placeholder {
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: #9e9e9e;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+input,
+textarea {
+  outline: none;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: block;
+  width: 100%;
+  border: 1px solid #c1c1c1;
+  padding: 16px 20px;
+}
+input:focus,
+textarea:focus {
+  border-bottom: 1px solid var(--main-color);
+}
+input:hover,
+textarea:hover {
+  border-bottom: 1px solid var(--main-color);
+}
+.input-btn {
+  background: var(--secondary-color);
+  display: inline-block;
+  width: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s ease-out;
+  text-transform: capitalize;
+  padding: 10px 40px;
+  border-radius: 100px;
+}
+.input-btn:hover {
+  background: var(--main-color);
+  transition: 0.4s ease-out;
+}
+.hidden {
+  display: none;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: -5;
+}
+
+#search-form {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  color: #757575;
+  font-size: 13px;
+}
+
+/* -> Social Media */
+.social-normal {
+  color: var(--text-color);
+  font-size: 16px;
+  text-decoration: none;
+}
+.social-normal:hover {
+  color: var(--default-color);
+  transition: 0.4s ease-out;
+}
+.social-bg-main,
+.social-bg-secondary {
+  color: white;
+  width: 30px;
+  height: 30px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+}
+.social-bg-main i,
+.social-bg-secondary i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 13px;
+  margin: 0 auto;
+  display: block;
+}
+.social-bg-main {
+  background: var(--main-color);
+}
+.social-bg-main:hover {
+  background: var(--secondary-color);
+  color: white;
+  transition: 0.4s ease-out;
+}
+.social-bg-secondary {
+  background: var(--secondary-color);
+}
+.social-bg-secondary:hover {
+  background: var(--main-color);
+  color: white;
+  transition: 0.4s ease-out;
+}
+
+/* 
+    4 - Typography
+*/
+
+/* -> Eyebrow Title Hero */
+
+.eyebrow,
+.eyebrow a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-left: 2px solid #fff;
+  padding-left: 14px;
+  line-height: 30px;
+  flex-basis: 100%;
+}
+.eyebrow a {
+  border-left: none;
+}
+/* -> Title Hero */
+
+.hero-title {
+  font-family: "Lora", serif;
+  font-size: 54px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  flex-basis: 100%;
+  text-transform: capitalize;
+}
+.hero-title-underline {
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 32px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  flex-basis: 100%;
+  margin-top: 14px;
+  flex-basis: 100%;
+}
+
+/* -> Title Section */
+
+.sec-title,
+.in-title,
+.comment-reply-title {
+  font-family: "Lora", serif;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+.sec-title::after,
+.in-title::after,
+.comment-reply-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.in-title::after,
+.comment-reply-title::after {
+  margin-bottom: 30px;
+}
+.center {
+  text-align: center;
+}
+.sec-title.center:after {
+  margin: 20px auto 50px;
+}
+/* -> In Section Title */
+
+.in-title,
+.comment-reply-title {
+  font-weight: 600;
+  font-size: 28px;
+}
+.title {
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-weight: 600;
+}
+/* -> Body Text */
+.body-text,
+.body-text p {
+  font-size: 15px;
+  color: var(--text-color);
+  font-weight: 500;
+  line-height: 24px;
+}
+/* -> Quote */
+.quote {
+  font-family: "Lora", "Serif";
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-style: italic;
+  line-height: 34px;
+  color: var(--default-color);
+}
+
+/*  5 - Section */
+
+.sec {
+  padding: 100px 0;
+  overflow: hidden;
+}
+.s-sec {
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}

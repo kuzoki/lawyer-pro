@@ -1,0 +1,127 @@
+{
+    "key": "group_611067663adaf",
+    "title": "3- SideBar Archive Search Tag Page Settings",
+    "fields": [
+        {
+            "key": "field_611067945a68b",
+            "label": "Display Side Bar in Single Posts \/  Archive Pages",
+            "name": "display_side_bar_in_single_posts",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "false": "No SideBar",
+                "true": "With SideBar"
+            },
+            "allow_null": 0,
+            "default_value": "true",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_611c1acf2a3b1",
+            "label": "Background Image Hero For Archive Page",
+            "name": "background_image_hero_for_archive",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_611c21ef3de97",
+            "label": "Eyebrow Search Page",
+            "name": "eyebrow_search_page",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "searched for",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_611c22223de98",
+            "label": "Eyebrow Category Page",
+            "name": "eyebrow_category_page",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The Posts In This Category",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_611c22443de99",
+            "label": "Eyebrow Tag Page",
+            "name": "eyebrow_tag_page",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "The Posts In This Tag",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1629233976
+}
