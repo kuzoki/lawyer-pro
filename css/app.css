@@ -475,8 +475,9 @@ footer .logo {
   margin-bottom: 16px;
 }
 .featured-sec img {
-  min-width: 64px;
+  width: 64px;
   margin-right: 20px;
+  max-width: none;
 }
 .mt-100 {
   margin-top: 100px;
@@ -1345,10 +1346,11 @@ footer .logo {
   transition: 0.2s ease;
 }
 .team-sec .col {
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.team-sec .col:nth-child(-n + 4) {
-  margin-top: 0px;
+
+.team-sec .col:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
 }
 @media (max-width: 992px) {
   .team-sec .col {
@@ -1757,4 +1759,8 @@ blockquote cite {
 .body-text .wp-block-quote {
   border-left: 4px solid var(--secondary-color) !important;
   padding: 18px 28px !important;
+}
+
+.team-sec .col:nth-last-child(-n + 4) {
+  margin-bottom: 0px;
 }

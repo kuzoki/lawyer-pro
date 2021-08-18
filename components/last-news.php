@@ -11,7 +11,7 @@
                         
                         $args = array(
                             'post_type' => 'post',
-                            'posts_per_page' => 1,
+                            'posts_per_page' => 3,
                             
                         );
                         $blog = new WP_Query($args);

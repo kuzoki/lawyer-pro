@@ -2,7 +2,7 @@
     $attorneys_fields = get_field('attorney_setting');
     $global_info = $attorneys_fields['global_info']
 ?>
-    <div class="hero hero-page" style="background: url(http://lawyer.local/wp-content/uploads/2021/07/bg.png);">
+    <div class="hero hero-page" style="background: url(<?= get_field('background_image_hero_for_archive', 'option') ?>);">
         <div class="bg-layer"></div>
         <div class="container">
             <div class="hero-content">

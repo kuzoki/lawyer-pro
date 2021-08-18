@@ -12,7 +12,7 @@
     <div class="testimonials-sec sec" style='background-image: url(<?= $background ?>);'>
         <div class="bg-layer"></div>
         <div class="container">
-            <h3 class="sec-title center"><?= $title ?> <?= $slider_settings ?>  </h3>
+            <h3 class="sec-title center"><?= $title ?> </h3>
                 <div class="flexslider-tes carousel">
                     <ul class="slides">
 

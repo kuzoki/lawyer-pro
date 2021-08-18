@@ -25,7 +25,7 @@ function test_custom_post_type(){
             ),
             'menu_icon' => 'dashicons-star-filled',
             'public'=> true,
-            'has_archive' => true,
+            'has_archive' => false,
             'supports' => array(
                 'title', 'thumbnail', 
             )
@@ -44,7 +44,7 @@ function test_custom_post_type(){
             ),
             'menu_icon' => 'dashicons-format-aside',
             'public'=> true,
-            'has_archive' => true,
+            'has_archive' => false,
             'supports' => array(
                 'title', 'thumbnail', 
             )
@@ -62,7 +62,7 @@ function test_custom_post_type(){
             ),
             'menu_icon' => 'dashicons-editor-help',
             'public'=> true,
-            'has_archive' => true,
+            'has_archive' => false,
             'supports' => array(
                 'title', 'thumbnail', 
             )
@@ -80,7 +80,7 @@ function test_custom_post_type(){
             ),
             'menu_icon'  => 'dashicons-id-alt',
             'public'=> true,
-            'has_archive' => true,
+            'has_archive' => false,
             'supports' => array(
                 'title', 'thumbnail', 
             )
