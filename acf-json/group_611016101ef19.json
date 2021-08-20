@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "33.33",
                 "class": "",
                 "id": ""
             },
@@ -30,7 +30,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "33.33",
                 "class": "",
                 "id": ""
             },
@@ -42,6 +42,30 @@
             "min_size": "",
             "max_width": "",
             "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_611fe246d2412",
+            "label": "Company Fav Icon",
+            "name": "company_fav_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 400,
+            "min_height": 400,
+            "min_size": "",
+            "max_width": 800,
+            "max_height": 800,
             "max_size": "",
             "mime_types": ""
         },
@@ -354,5 +378,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1628501206
+    "modified": 1629479944
 }

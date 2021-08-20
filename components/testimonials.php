@@ -38,13 +38,17 @@
                                 <li>
                                     <div class="tes-item">
                                         <div class="tes-img">
-                                            <img src="<?php echo $testimonials_fields['image_icon']; ?>" alt="person"/>
+                                            <?php if($testimonials_fields['image_icon']): ?>
+                                                <img src="<?= $testimonials_fields['image_icon']; ?>" alt="person"/>
+                                            <?php else: ?> 
+                                                <img src="<?= get_template_directory_uri() ?>/assets/images/client-icon.png" alt="Attorney">
+                                            <?php endif ?>  
                                             <p class="quote-icon">“</p>
                                         </div>
                                         <div class="tes-text">
-                                            <p class="person-name"><?php echo $testimonials_fields['full_name']; ?></p>
+                                            <p class="person-name"><?= $testimonials_fields['full_name']; ?></p>
                                             <p class="testimonial">
-                                                <?php echo $testimonials_fields['what_the_say_about_us']; ?>
+                                                <?= $testimonials_fields['what_the_say_about_us']; ?>
                                             </p>
                                         </div>
                                     </div>

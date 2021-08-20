@@ -20,7 +20,11 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="Team Member" class="single-member-img">
+                <?php if($attorneys_fields['about_page_image']): ?>
+                    <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="Attorney" class="single-member-img">
+                <?php else: ?> 
+                    <img src="<?= get_template_directory_uri() ?>/assets/images/notfound.png" alt="Attorney">
+                <?php endif ?>     
                 <div class="warp">
                     <h2 class="name"><?php echo $global_info['first_name'].' '.$global_info['last_name'] ?></h2>
                     <p class="role body-text"><?php echo $global_info['specialty'] ?></p>
