@@ -1,0 +1,58 @@
+{
+    "key": "group_611fc9f11a0c6",
+    "title": "9 - Single & Practice Area Contact Form Style Contact Us block",
+    "fields": [
+        {
+            "key": "field_611fcaeefff0d",
+            "label": "Contact Us block Title Text",
+            "name": "contact_us_block_title_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Speak With Our Experts Today!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_611fcb00fff0e",
+            "label": "Contact Us block Cta Button",
+            "name": "contact_us_block_cta_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1629477020
+}

@@ -221,11 +221,7 @@ add_filter('pre_get_posts','SearchFilter');
 			'menu_title'	=> 'Association Info ',
 			'parent_slug'	=> 'theme-general-settings',
 		));
-		acf_add_options_sub_page(array(
-			'page_title' 	=> 'Header & Footer Settings',
-			'menu_title'	=> 'Header & Footer ',
-			'parent_slug'	=> 'theme-general-settings',
-		));
+		
 		
 		
 	}

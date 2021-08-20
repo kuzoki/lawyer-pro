@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_611bd9989c970",
-            "label": "big single page image",
+            "label": "Big single page image",
             "name": "big_single_page_image",
             "type": "image",
             "instructions": "",
@@ -44,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1629215155
+    "modified": 1629473429
 }

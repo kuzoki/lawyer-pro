@@ -73,8 +73,11 @@
 							
 						?>
 					</div>
+					<?php $cta_button = get_field('contact_us_block_cta_button', 'option'); ?>
 					
-					<a href="http://lawyer.local/contact/" taregt="_blank" class="cta-btn round-btn-secondary display-none">Get Free Quote</a>
+					<?php if($cta_button): ?>
+						<a href="<?= $cta_button['url'] ?>" class="cta-btn round-btn-secondary display-none">Get Free Quote</a>
+					<?php endif; ?>   
 					
                     
             </div>

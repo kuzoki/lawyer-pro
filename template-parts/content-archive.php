@@ -5,7 +5,7 @@
     $eyebrow_category_page = get_field('eyebrow_category_page', 'option' );
     $eyebrow_tag_page = get_field('display_side_bar_in_single_posts', 'option' );
     $class_side ='';
-    if($sidebar_op == 'true'): $class_side = "col-lg-8 pe-lg-5"; else: $class_side = "col-12"; endif;
+    if($sidebar_op == 'true'): $class_side = "col-lg-8 pe-lg-5"; $class_side_post = "col-lg-6"; else: $class_side = "col-12"; $class_side_post = "col-lg-4"; endif;
 
     $sub_title = '';
     $title = '';
@@ -88,10 +88,7 @@
                     ) ); ?>
 
                 </div>
-                <div class="blue--block container text-center my-5">
-                    <h3>Speak With Our Experts Today!</h3>
-                    <a href="/contact" class="cta-btn round-btn-secondary">Get free Quot</a>
-                </div>
+                
             </div>
             <?php     
                 if($sidebar_op == 'true'): get_sidebar();  endif;
@@ -99,6 +96,6 @@
         </div>
        
     </div>
-   
+    <?php get_template_part( 'template-parts/free_quot');?>                    
     
 </div>

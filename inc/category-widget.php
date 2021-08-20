@@ -139,7 +139,7 @@ class category_widgets extends WP_Widget {
            
 		
 		<?php 
-		echo $cat ;
+		// echo $cat ;
 		
 	}
 

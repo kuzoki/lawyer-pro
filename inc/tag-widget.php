@@ -74,7 +74,7 @@ class tags_widgets extends WP_Widget {
 
 		$tag_l =  get_tags(array(
 			'hide_empty' => false
-		  ));;
+		));;
 		
         
        
@@ -142,7 +142,7 @@ class tags_widgets extends WP_Widget {
            
 		
 		<?php 
-		echo $cat ;
+		// echo $cat ;
 		
 	}
 

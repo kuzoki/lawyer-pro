@@ -127,7 +127,4 @@
         
 </div>
 
-<div class="blue--block container text-center my-5">
-    <h3>Speak With Our Experts Today!</h3>
-    <a href="/contact" class="cta-btn round-btn-secondary">Get free Quot</a>
-</div>
+<?php get_template_part( 'template-parts/free_quot');?>   
