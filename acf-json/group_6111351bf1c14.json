@@ -74,7 +74,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "LAW COMPANY",
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
@@ -93,7 +93,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "When You’ve Been Hurt,\r\nWe’re Here For You",
                                     "placeholder": "",
                                     "maxlength": "",
                                     "rows": 2,
@@ -112,7 +112,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Compassionate, Aggressive Representation\r\nFor Georgia Injury Victims",
                                     "placeholder": "",
                                     "maxlength": "",
                                     "rows": 2,
@@ -197,7 +197,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Page",
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
@@ -216,7 +216,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Page Hero\r\nTitle",
                                     "placeholder": "",
                                     "maxlength": "",
                                     "rows": 2,
@@ -247,7 +247,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Your Trusted Law Firm For Quality",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -360,7 +360,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "About Us",
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
@@ -512,7 +512,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
+                                    "default_value": "Why Chose Us?",
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
@@ -852,7 +852,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "What Our Clients Say",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -932,7 +932,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Practice Areas",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -1233,7 +1233,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Frequently Asked Questions",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -1320,7 +1320,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Speak With Our Experts Today!",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -1564,7 +1564,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Our Expert Team",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -1820,7 +1820,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
+                            "default_value": "Our Field Of Expertise",
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
@@ -2080,5 +2080,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1629477519
+    "modified": 1629478187
 }
