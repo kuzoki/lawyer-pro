@@ -1481,6 +1481,15 @@ footer .logo {
 } */
 
 /* Single Post Team */
+.blog--posts .margin {
+  margin-bottom: 20px;
+}
+.blog--posts .margin:nth-last-of-type(-n + 2) {
+  margin-bottom: 0px;
+}
+.single-post img {
+  width: 100%;
+}
 .single--post .warp {
   background: var(--main-color);
   padding: 20px 30px;
