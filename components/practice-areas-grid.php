@@ -49,7 +49,7 @@
                             
                             $practice_field = get_field('practice_areas_setting'); 
                     ?>
-                    <div class="col-lg-4 col-md-6 col">
+                    <div class="col-lg-4 col-md-6 col-12">
                         
                         <img src="<?= $practice_field['featured_image'] ?>" class="mb-4" alt="Practice Area">
                         <h3 class="in-title"><?php the_title(); ?></h3>

@@ -11,24 +11,32 @@
     <div class="container">
     
                 
-        <div class="title-part">
-            <p><?= $title ?></p>
-        </div>
-        <div class="trust-badges group">
-        <?php 
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="title-part">
+                    <p><?= $title ?></p>
+                </div>
+            </div>
             
-            if( $logos ):
-               
-                foreach( $logos as $image ):
-        ?>           
-                <img src="<?= $image['image'] ?>" alt="badge">  
-                
-        <?php      
-                endforeach;
-               
-            endif;
-        ?>          
-               
+            <div class="col-lg-8">
+                <div class="trust-badges">
+                    <div class="row">
+                        <?php 
+                            
+                            if( $logos ):
+                            
+                                foreach( $logos as $image ):
+                        ?>           
+                             <div class="col-lg-4 mb-1"> <img src="<?= $image['image'] ?>" alt="badge">  </div>
+                                
+                        <?php      
+                                endforeach;
+                            
+                            endif;
+                        ?>          
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

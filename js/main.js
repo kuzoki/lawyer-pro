@@ -279,7 +279,7 @@
         flexslider.vars.maxItems = gridSize;
     });
 
-console.log("Attorneys");
+
     
 
 })(jQuery);

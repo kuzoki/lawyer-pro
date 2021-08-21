@@ -313,7 +313,7 @@ textarea:hover {
 }
 
 /* 
-    4 - Typography
+    4 - Typography 
 */
 
 /* -> Eyebrow Title Hero */
@@ -332,6 +332,13 @@ textarea:hover {
 }
 .eyebrow a {
   border-left: none;
+}
+
+@media (max-width: 992px) {
+  .eyebrow,
+  .eyebrow a {
+    font-size: 15px;
+  }
 }
 /* -> Title Hero */
 
@@ -353,9 +360,18 @@ textarea:hover {
   font-family: "Montserrat", sans-serif;
   flex-basis: 100%;
   margin-top: 14px;
-  flex-basis: 100%;
 }
 
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 35px;
+    margin-top: 18px;
+  }
+  .hero-title-underline {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
 /* -> Title Section */
 
 .sec-title,
@@ -388,6 +404,25 @@ textarea:hover {
 .sec-title.center:after {
   margin: 20px auto 50px;
 }
+@media (max-width: 992px) {
+  .sec-title,
+  .in-title,
+  .comment-reply-title {
+    font-size: 25px;
+  }
+  .sec-title::after,
+  .in-title::after,
+  .comment-reply-title::after {
+    margin-top: 16px;
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 780px) {
+  .in-title::after,
+  .comment-reply-title::after {
+    margin-bottom: 16px;
+  }
+}
 /* -> In Section Title */
 
 .in-title,
@@ -402,13 +437,94 @@ textarea:hover {
   color: var(--main-color);
   font-weight: 600;
 }
+@media (max-width: 992px) {
+  in-title,
+  .comment-reply-title {
+    font-size: 22px;
+  }
+  .title {
+    font-size: 16px;
+  }
+}
+
 /* -> Body Text */
+
 .body-text,
 .body-text p {
   font-size: 15px;
   color: var(--text-color);
   font-weight: 500;
   line-height: 24px;
+}
+.body-text h1,
+.body-text h2,
+.body-text h3,
+.body-text h4,
+.body-text h5,
+.body-text h6 {
+  font-family: Lora;
+  font-weight: 500;
+  color: #003470;
+  line-height: 27px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.body-text h1,
+.body-text h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.body-text h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+.body-text h4 {
+  font-size: 18px;
+  line-height: 27px;
+}
+.body-text h5 {
+  font-size: 18px;
+}
+.body-text ul {
+  list-style: disc;
+}
+.body-text ul li {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+@media (max-width: 992px) {
+  .body-text,
+  .body-text p {
+    font-size: 14px;
+  }
+  .body-text h1,
+  .body-text h2 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .body-text h3 {
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .body-text h4 {
+    font-size: 15px;
+    line-height: 27px;
+  }
+  .body-text h5 {
+    font-size: 15px;
+  }
+  .body-text ul {
+    list-style: disc;
+  }
 }
 /* -> Quote */
 .quote {
@@ -418,6 +534,12 @@ textarea:hover {
   font-style: italic;
   line-height: 34px;
   color: var(--default-color);
+}
+
+@media (max-width: 992px) {
+  .quote {
+    font-size: 20px;
+  }
 }
 
 /*  5 - Section */

@@ -49,7 +49,7 @@
                             
                             $attorneys_fields = get_field('attorney_setting'); 
                     ?>
-                    <div class="col-lg-3 col-md-6 col">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <div class="warp">
                             <?php if($attorneys_fields['about_page_image']):?>
                                 <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="attorney">
