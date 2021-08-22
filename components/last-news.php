@@ -20,7 +20,7 @@
                         $blog->the_post();
                                         
                     ?>       
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4">
                         <div class="single-post">
                             <a href="<?php the_permalink(); ?>">
                                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="blog image" class='img-blog-home'>

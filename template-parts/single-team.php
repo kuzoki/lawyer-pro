@@ -19,7 +19,7 @@
 <div class="single--post sec">
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 card-col">
                 <?php if($attorneys_fields['about_page_image']): ?>
                     <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="Attorney" class="single-member-img">
                 <?php else: ?> 
@@ -29,7 +29,7 @@
                     <h2 class="name"><?php echo $global_info['first_name'].' '.$global_info['last_name'] ?></h2>
                     <p class="role body-text"><?php echo $global_info['specialty'] ?></p>
                     <div class="row links px-0">
-                        <div class="col-8 left">
+                        <div class="col-sm-8 left">
                             <ul>
                                 <?php if( $global_info['phone_number']): ?>
                                     <li><i class="fas fa-phone"></i><a href="#"><?php echo $global_info['phone_number'] ?></a></li>
@@ -43,7 +43,7 @@
                                 
                             </ul>
                         </div>
-                        <div class="col-4 right">
+                        <div class="col-sm-4 right">
                             <!-- Social Media -->
                             <ul>
                                 <?php $social_media = $global_info['social_media']; if( $social_media ): foreach( $social_media as $row ): ?> 
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-8 text-col">
                 <h3 class="sec-title">Biography & Experience</h3> 
                 <!-- Field -->
                 <div class="body-text">
