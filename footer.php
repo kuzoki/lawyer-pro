@@ -13,7 +13,7 @@
 
 
     
-
+</main>    
     <!-- FOOTER -->
     <footer>
         <div class="container group">
@@ -27,7 +27,7 @@
                                     
                                     if(get_field( "company_logo", "option" )):
                                 ?> 
-                                    <a href="/"><img src="<?= esc_url(get_field( "company_logo", "option" )); ?>" alt="logo"></a>
+                                    <a href="/"><img src="<?php echo esc_url(get_field( "company_logo", "option" )); ?>" alt="logo"></a>
                                 <?php 
                                     else: 
                                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -82,7 +82,7 @@
                         <div class="item">
                             <p class="title">HEADQUARTERS</p>
                             <p class="body-text">
-                                <?= get_field('company_address' , 'option') ?>
+                                <?php echo get_field('company_address' , 'option') ?>
                             </p>
                         </div>
                     </div>
@@ -101,8 +101,8 @@
                                         foreach( $social_media as $row ) :
                                             
                                             ?>
-                                            <a href="<?= $row['social_link'];?>" target="_blank" rel="noopener noreferrer" class="social-normal">
-                                                <?= $row['select_icon'];?>
+                                            <a href="<?php echo esc_url($row['social_link']);?>" target="_blank" rel="noopener noreferrer" class="social-normal">
+                                                <?php echo $row['select_icon'];?>
                                             </a>
                                         <?php   
                                         endforeach;
@@ -132,7 +132,7 @@
                                     
                                     if(get_field( "trust_badge", "option" )):
                                 ?> 
-                                    <img src="<?= esc_url(get_field( "trust_badge", "option" )); ?>" alt="trust-logo" class="trust-logo">
+                                    <img src="<?php echo esc_url(get_field( "trust_badge", "option" )); ?>" alt="trust-logo" class="trust-logo">
                                 <?php endif; ?>    
                             
                         </div>          

@@ -45,12 +45,12 @@ $order_type = $slider_settings['order_type'];
                     <div class="row justify-content-center align-items-center">
                         <div class="col-lg-6 position-relative">
                             <div class="slide-content">
-                                <h3 class="sec-title">Meet <span><?= esc_html(the_title()) ?></span></h3>
+                                <h3 class="sec-title">Meet <span><?php echo esc_html(the_title()) ?></span></h3>
                                 <p class="quote mb-4" >
-                                    <?= $home_slider_description['our_attorney_quote'] ?>
+                                    <?php echo $home_slider_description['our_attorney_quote'] ?>
                                 </p>
                                 <p class="body-text mb-4"> 
-                                    <?= $home_slider_description['attorney_excerpt'] ?>
+                                    <?php echo $home_slider_description['attorney_excerpt'] ?>
                                 </p>
                                 
                                 <a href="<?php esc_url(the_permalink()); ?>" class="read-more-btn float-end">read more <i class="fas fa-long-arrow-alt-right"></i></a>
@@ -59,9 +59,9 @@ $order_type = $slider_settings['order_type'];
                         <div class="col-lg-6 slide-image">
                             
                             <?php if($home_slider_description['image']):?>
-                                <img src="<?= esc_url($home_slider_description['image']) ?>" class="img-fluid" alt="<?= esc_attr(the_title())?>">
+                                <img src="<?php echo esc_url($home_slider_description['image']) ?>" class="img-fluid" alt="<?php echo esc_attr(the_title())?>">
                             <?php else:?>
-                                <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="<?= esc_attr(the_title())?>">
+                                <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="<?php echo esc_attr(the_title())?>">
                             <?php endif;?>   
                         </div>
                     </div>

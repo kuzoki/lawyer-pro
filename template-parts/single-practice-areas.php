@@ -1,12 +1,12 @@
 <?php 
    $practice_content = get_field('practice_areas_setting');
 ?>
-<div class="hero hero-page" style="background: url(<?= esc_url($practice_content['single_page_background_hero']) ?>);">
+<div class="hero hero-page" style="background: url(<?php echo esc_url($practice_content['single_page_background_hero']) ?>);">
     <div class="bg-layer"></div>
     <div class="container">
         <div class="hero-content">
                 <p class="eyebrow">Practice Area</p>
-                <h2 class="hero-title mt-3"><?= esc_html(get_the_title())?></h2>
+                <h2 class="hero-title mt-3"><?php echo esc_html(get_the_title())?></h2>
         </div>
     </div>
 </div>
@@ -38,7 +38,7 @@
 
                     <li>
                         <a href="<?php the_permalink(); ?>" class="<?php if( $title_Current === get_the_title() ): echo 'active-pr'; else: echo ''; endif; ?>">
-                            <?= the_title() ?>
+                            <?php echo the_title() ?>
                         </a>
                     </li>
                     <?php 
@@ -54,12 +54,12 @@
                     if($practice_content['featured_image_single_practice_page']):
                 ?>
                 
-                    <img src="<?= $practice_content['featured_image_single_practice_page']?>" alt="practice Image">
+                    <img src="<?php echo esc_url($practice_content['featured_image_single_practice_page'])?>" alt="practice Image">
                 <?php endif;?>
-                    <h3 class="sec-title"><?= esc_html(get_the_title()) ?></h3>   
+                    <h3 class="sec-title"><?php echo esc_html(get_the_title()) ?></h3>   
                     
                     <div class="body-text">
-                        <?= $practice_content['description']?>
+                        <?php echo $practice_content['description']?>
                     </div>
             </div>
         </div>
@@ -98,17 +98,17 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="warp">
                         <?php if($attorneys_fields['about_page_image']):?>
-                            <img src="<?= esc_url($attorneys_fields['about_page_image']) ?>" alt="attorney">
+                            <img src="<?php echo esc_url($attorneys_fields['about_page_image']) ?>" alt="<?php echo esc_attr( the_title() )?>">
                         <?php else:?>
-                            <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="attorney">
+                            <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="attorney">
                         <?php endif;?>  
                       
                             
                         <div class="text-warp">
-                            <h3 class="name"><?= $attorneys_fields['global_info']['first_name'] ?><?= $attorneys_fields['global_info']['last_name'] ?></h3>
+                            <h3 class="name"><?php echo esc_html($attorneys_fields['global_info']['first_name']) ?><?php echo esc_html($attorneys_fields['global_info']['last_name']) ?></h3>
                             
                             <p class="role body-text text-capitalize">
-                                <?= esc_html($attorneys_fields['global_info']['specialty']) ?>
+                                <?php echo esc_html($attorneys_fields['global_info']['specialty']) ?>
                             </p>
                             <a href="<?php esc_url(the_permalink()); ?>" class="read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>

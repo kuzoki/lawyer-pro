@@ -11,11 +11,11 @@ get_header();
     
 ?>
     <!-- Hero -->
-    <div class="hero hero-page" style="background: url(<?= esc_url($news_hero['background_image']) ?>);">
+    <div class="hero hero-page" style="background: url(<?php echo esc_url($news_hero['background_image']) ?>);">
         <div class="bg-layer"></div>
         <div class="container">
             <div class="hero-content">
-                <p class="eyebrow"><?= esc_html($news_hero['eyebrow']) ?></p>
+                <p class="eyebrow"><?php echo esc_html($news_hero['eyebrow']) ?></p>
                 <h2 class="hero-title mt-3"><?php if($news_hero['title']): echo esc_html($news_hero['title']); else:  echo esc_html(get_the_title( $page_id )); endif ?></h2>
                 
             </div>
@@ -28,7 +28,7 @@ get_header();
 <div class="sec blog--posts">
     <div class="container">
         <div class="row">
-            <div class="<?= esc_attr($class_side);?>">
+            <div class="<?php echo esc_attr($class_side);?>">
                 <div class="row">
                     <?php 
             
@@ -36,14 +36,14 @@ get_header();
                             while ( have_posts() ) {
                                 the_post(); 
                     ?>
-                        <div class="<?= esc_attr($class_side_post);?> margin">
+                        <div class="<?php echo esc_attr($class_side_post);?> margin">
                             <div class="single-post">
                                 <a href="<?php esc_url(the_permalink()); ?>">
                                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="blog image" class='img-blog-home'>
                                 </a>
-                                <div class="category-link my-2"><?= the_category();?></div>
-                                <a class="post-title mb-1" href="<?php esc_url(the_permalink()); ?>" title="<?= esc_attr(get_the_title())?>"><?= wp_trim_words(get_the_title(),8,'..');?></a>
-                                <div class="body-text date"><?php the_time('F j, Y');?> By <?= get_the_author() ?></div>
+                                <div class="category-link my-2"><?php echo the_category();?></div>
+                                <a class="post-title mb-1" href="<?php esc_url(the_permalink()); ?>" title="<?php echo esc_attr(get_the_title())?>"><?php echo wp_trim_words(get_the_title(),8,'..');?></a>
+                                <div class="body-text date"><?php the_time('F j, Y');?> By <?php echo get_the_author() ?></div>
                             </div>
                         </div>
                     <?php 
@@ -57,8 +57,8 @@ get_header();
  
                     <?php the_posts_pagination( array(
                         
-                        'prev_text' => __( '<i class="fas fa-angle-left"></i>', 'lawyer' ),
-                        'next_text' => __( '<i class="fas fa-angle-right"></i>', 'lawyer' ),
+                        'prev_text' => __( '<i class="fas fa-angle-left"></i>', 'fletwp' ),
+                        'next_text' => __( '<i class="fas fa-angle-right"></i>', 'fletwp' ),
                     ) ); ?>
 
                 </div>

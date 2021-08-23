@@ -6,9 +6,9 @@
      */
     $cta_button = get_sub_field('cta_button');      
 ?>
-<div class="faq-sec sec group" style='background:url(<?= esc_url(the_sub_field('background_image')) ?>)'>
+<div class="faq-sec sec group" style='background:url(<?php echo esc_url(the_sub_field('background_image')) ?>)'>
     <div class="container">
-        <h3 class="sec-title center"><?= esc_html(the_sub_field('title_text')) ?></h3>
+        <h3 class="sec-title center"><?php echo esc_html(the_sub_field('title_text')) ?></h3>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="questions-col">
@@ -30,9 +30,11 @@
                             ?>
                         
 
-                                <div class="question" data-ques-nbr="<?= $id_q ?>">
-                                    <p class="number" data-nbr="nbr<?= esc_attr( $faq->current_post + 01 );?>"><?php if($faq->current_post < 9){echo "0";}?><?= esc_attr( $faq->current_post + 01 );?></p>
-                                    <p><?= esc_html($faq_fields['question']); ?></p>
+                                <div class="question" data-ques-nbr="<?php echo esc_attr($id_q) ?>">
+                                    <p class="number" data-nbr="nbr<?php echo esc_attr( $faq->current_post + 01 );?>">
+                                        <?php if($faq->current_post < 9){echo "0";}?><?php echo esc_html( $faq->current_post + 01 );?>
+                                    </p>
+                                    <p><?php echo esc_html($faq_fields['question']); ?></p>
                                 </div>
 
                             <?php 
@@ -58,9 +60,9 @@
                                 $id_a = get_the_ID();  
                                 $faq_fields = get_field('faq_setting');                
                         ?>
-                            <div class="answer " id="answer-<?= esc_attr( $faq->current_post + 01 );?>" data-answer-nbr="<?= $id_a ?>">
+                            <div class="answer " id="answer-<?php echo esc_attr( $faq->current_post + 01 );?>" data-answer-nbr="<?php echo esc_attr($id_a) ?>">
                                 <p class="body-text">
-                                    <?= $faq_fields['answer']; ?>
+                                    <?php echo $faq_fields['answer']; ?>
                                 </p>
                                 
                             </div>
@@ -74,8 +76,8 @@
                                 
                                 
                         <div class="more-questions">
-                            <p><?= the_sub_field('sub_text') ?></p>
-                            <a href="<?= esc_url($cta_button['url']) ?>" class="cta-btn round-btn" target="<?= esc_attr($cta_button['target']) ?>"><?= esc_html($cta_button['title']) ?></a>
+                            <p><?php echo the_sub_field('sub_text') ?></p>
+                            <a href="<?php echo esc_url($cta_button['url']) ?>" class="cta-btn round-btn" target="<?php echo esc_attr($cta_button['target']) ?>"><?php echo esc_html($cta_button['title']) ?></a>
                                    
                         </div>
                                 

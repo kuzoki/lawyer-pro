@@ -110,13 +110,13 @@
         ease: Power0.easeOut
         // delay: '-0.4'
     })
-        .from('.tagline', 0.4, {
+        .from('.hero-title-underline', 0.4, {
         y: -20, 
         autoAlpha: 0, 
         ease: Power0.easeOut
         // delay: '-0.4'
     })
-        .from('.hero-content .btn', 0.4, {
+        .from('.hero-content .cta-btn', 0.4, {
         y: 0, 
         autoAlpha: 0, 
         ease: Power0.easeOut
@@ -146,6 +146,7 @@
                 .from('.about-text', 1, { autoAlpha: 0, y: 120, ease: Power2.easeInOut, delay: '-1' })
                 .from('.rec-shape', 1, { width: 0, ease: Power2.easeInOut, delay: -1 })
                 .from('.why-us-sec', 1, { autoAlpha: 0, y: 120, ease: Power2.easeInOut })
+                .from('.featured-sec', 1, { autoAlpha: 0, y: 120, ease: Power2.easeInOut })
         )
         .addTo(controller);
 
@@ -225,7 +226,7 @@
         triggerHook: 1,
         reverse: false
     })
-        .setTween(blogTL.staggerTo('.single-post', 1, { autoAlpha: 1, ease: Power4.easeIn }, 0.3))
+        .setTween(blogTL.staggerTo('.blog-sec .single-post', 1, { autoAlpha: 1, ease: Power4.easeIn }, 0.3))
         .addTo(controller);
 
 

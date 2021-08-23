@@ -2,12 +2,12 @@
     $attorneys_fields = get_field('attorney_setting');
     $global_info = $attorneys_fields['global_info']
 ?>
-    <div class="hero hero-page" style="background: url(<?= get_field('background_image_hero_for_archive', 'option') ?>);">
+    <div class="hero hero-page" style="background: url(<?php echo get_field('background_image_hero_for_archive', 'option') ?>);">
         <div class="bg-layer"></div>
         <div class="container">
             <div class="hero-content">
                 <p class="eyebrow">Team member</p>
-                <h2 class="hero-title mt-3"><?= get_the_title()?></h2>
+                <h2 class="hero-title mt-3"><?php echo get_the_title()?></h2>
                 
             </div>
         </div>
@@ -21,24 +21,24 @@
         <div class="row">
             <div class="col-lg-4 card-col">
                 <?php if($attorneys_fields['about_page_image']): ?>
-                    <img src="<?= esc_url($attorneys_fields['about_page_image']) ?>" alt="<?= esc_attr(the_title())?>" class="single-member-img">
+                    <img src="<?php echo esc_url($attorneys_fields['about_page_image']) ?>" alt="<?php echo esc_attr(the_title())?>" class="single-member-img">
                 <?php else: ?> 
-                    <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="Attorney">
+                    <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="Attorney">
                 <?php endif ?>     
                 <div class="warp">
-                    <h2 class="name"><?php echo $global_info['first_name'].' '.$global_info['last_name'] ?></h2>
-                    <p class="role body-text"><?php echo $global_info['specialty'] ?></p>
+                    <h2 class="name"><?php echo esc_html(the_title()) ?></h2>
+                    <p class="role body-text"><?php echo esc_html($global_info['specialty']) ?></p>
                     <div class="row links px-0">
                         <div class="col-sm-8 left">
                             <ul>
                                 <?php if( $global_info['phone_number']): ?>
-                                    <li><i class="fas fa-phone"></i><a href="tel:<?= esc_html($global_info['phone_number']) ?>"><?= esc_html($global_info['phone_number']) ?></a></li>
+                                    <li><i class="fas fa-phone"></i><a href="tel:<?php echo esc_html($global_info['phone_number']) ?>"><?php echo esc_html($global_info['phone_number']) ?></a></li>
                                 <?php endif; ?>
                                 <?php if( $global_info['email']): ?>
-                                    <li><i class="fas fa-envelope"></i><a href="mailto:<?= esc_attr($global_info['email']) ?>"><?= esc_html($global_info['email']) ?></a></li>
+                                    <li><i class="fas fa-envelope"></i><a href="mailto:<?php echo esc_attr($global_info['email']) ?>"><?php echo esc_html($global_info['email']) ?></a></li>
                                 <?php endif; ?>
                                 <?php if( $global_info['address']): ?>
-                                    <li><i class="fas fa-map-marker-alt"></i><?= esc_html($global_info['address']) ?></li>
+                                    <li><i class="fas fa-map-marker-alt"></i><?php echo esc_html($global_info['address']) ?></li>
                                 <?php endif; ?>
                                 
                             </ul>
@@ -47,7 +47,7 @@
                             <!-- Social Media -->
                             <ul>
                                 <?php $social_media = $global_info['social_media']; if( $social_media ): foreach( $social_media as $row ): ?> 
-                                 <li><a href="<?= esc_url($row['link'])?>" target='_blank' ><?= $row['icon']?></a></li>
+                                 <li><a href="<?php echo esc_url($row['link'])?>" target='_blank' ><?php echo $row['icon']?></a></li>
                                 <?php  endforeach; endif;?>
                             </ul>
                             <!-- Pdf Link -->
@@ -72,7 +72,7 @@
                     <div class='admission-list body-text'>
                         <ul class="ps-5">
                         <?php foreach( $bar_list as $row ): ?>
-                            <li><?= $row['text'] ?></li>
+                            <li><?php echo $row['text'] ?></li>
                         <?php endforeach; ?>
                         </ul>
                     </div> 
@@ -87,7 +87,7 @@
                     <div class='admission-list body-text'>
                         <ul class="ps-5">
                         <?php foreach( $education_path as $row ): ?>
-                            <li><?= $row['text'] ?></li>
+                            <li><?php echo $row['text'] ?></li>
                         <?php endforeach; ?>
                         </ul>
                     </div> 
@@ -101,8 +101,8 @@
                     <div class='row'>
                         <?php foreach( $appeared_on as $row ): ?>
                         <div class="col-4 block-col">
-                            <a href="<?= esc_url($row['link']) ?>" target="_blank" class="p-2 d-block seen-on">
-                                <img src="<?= esc_url($row['logo']) ?>" alt="seen on">
+                            <a href="<?php echo esc_url($row['link']) ?>" target="_blank" class="p-2 d-block seen-on">
+                                <img src="<?php echo esc_url($row['logo']) ?>" alt="seen on">
                             </a>
                         </div>
                         <?php endforeach; ?>

@@ -15,16 +15,16 @@
     <!-- Practice Area Section Page -->
         <div class="team-sec sec">
             <div class="container">
-                <h3 class="sec-title"><?= esc_html(get_sub_field('title_text'))?></h3>
+                <h3 class="sec-title"><?php echo esc_html(get_sub_field('title_text'))?></h3>
                 <!-- Text Area -->
                 <?php if($add_paragraph_after_title == 'one'): ?>
                 <div class="col-12 body-text mb-5">
-                    <?= get_sub_field('paragraph_one_column')?>
+                    <?php echo get_sub_field('paragraph_one_column')?>
                 </div> 
                 <?php elseif($add_paragraph_after_title == 'two'): ?>
                 <div class="row mb-5">
-                    <div class="col-lg-6 body-text"><?= $group_para['para_one']?></div>
-                    <div class="col-lg-6 body-text"><?= $group_para['para_two']?></div>
+                    <div class="col-lg-6 body-text"><?php echo $group_para['para_one']?></div>
+                    <div class="col-lg-6 body-text"><?php echo $group_para['para_two']?></div>
                 </div>
                 <?php endif;?>
                 <div class="row">
@@ -51,9 +51,9 @@
                     ?>
                     <div class="col-lg-4 col-md-6 col-12">
                         
-                        <img src="<?= esc_url($practice_field['featured_image']) ?>" class="mb-4" alt="<?= esc_attr(the_title())?>">
+                        <img src="<?php echo esc_url($practice_field['featured_image']) ?>" class="mb-4" alt="<?php echo esc_attr(the_title())?>">
                         <h3 class="in-title"><?php esc_html(the_title()); ?></h3>
-                        <p class="body-text mb-2"><?= wp_trim_words( $practice_field['description'], 8, '...' );?></p>
+                        <p class="body-text mb-2"><?php echo wp_trim_words( $practice_field['description'], 8, '...' );?></p>
                         <a href="<?php esc_url(the_permalink()); ?>" class="read-more-btn" title="<?php esc_attr(the_title()); ?>">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                         
                     </div>

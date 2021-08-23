@@ -1144,14 +1144,16 @@ footer .logo {
 }
 
 /* Blog Section */
-.blog-sec.sec {
+/* .blog-sec.sec {
   padding-bottom: 70px !important;
-}
+} */
 
 .blog-sec .single-post img {
   width: 100%;
 }
-
+.blog-sec .single-post {
+  visibility: hidden;
+}
 /* Banner CTA */
 .blue--block {
   background: var(--main-color);
@@ -1401,7 +1403,9 @@ footer .logo {
   text-transform: capitalize;
   margin-bottom: 30px !important;
 }
-
+.blog-sec .date {
+  margin-bottom: 0px !important;
+}
 /* Team Grid */
 
 .team-sec {
@@ -1849,7 +1853,8 @@ textarea:focus {
   margin-bottom: 0px;
 }
 
-.side-tag {
+.side-tag,
+.tags-link a {
   background: #e4e4e4;
   font-family: Montserrat;
   font-style: normal;
@@ -1863,7 +1868,8 @@ textarea:focus {
   border-radius: 100px;
   text-transform: capitalize;
 }
-.side-tag:hover {
+.side-tag:hover,
+.tags-link a:hover {
   background: var(--secondary-color);
   color: white;
 }

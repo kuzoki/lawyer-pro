@@ -29,6 +29,9 @@ function lawyer_comment_template($comment, $args, $depth) {
 								
 			</div>
 		</div>
-
+						
 	<?php
+	paginate_comments_links();
+	if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 }
+

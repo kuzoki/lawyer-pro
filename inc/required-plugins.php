@@ -40,12 +40,8 @@ function alex_register_required_plugins() {
 			'name'        => 'Advanced Custom Fields',
 			'slug'        => 'advanced-custom-fields',
 			'required'    =>  true
-		),
-		array(
-			'name'        => 'Menu Icons by ThemeIsle',
-			'slug'        => 'menu-icons',
-			'required'    =>  true
 		)
+		
 		
 		
 

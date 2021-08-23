@@ -19,16 +19,16 @@
     <div class="container">
 
 
-        <h3 class="sec-title"><?= esc_html($title)  ?></h3>
+        <h3 class="sec-title"><?php echo esc_html($title)  ?></h3>
         <div class="pattern selectDisable">
             <img src="<?php echo esc_url(get_template_directory_uri()) ?>/assets/images/pattern1.png" alt="pattern">
         </div>
         <div class="shape"></div>
         <div class="text-sec">
-            <p class="body-text"><?= $text?></p>
+            <p class="body-text"><?php echo $text ?></p>
 
             <?php if($cta_button): ?>
-                <a href="<?= esc_url($cta_button['url']) ?>" target="<?= esc_attr($cta_button['target']) ?>" class="cta-btn hollow-btn "><?= esc_html($cta_button['title']) ?> <i class="fas fa-chevron-right"></i></a>
+                <a href="<?php echo esc_url($cta_button['url']) ?>" target="<?php echo esc_attr($cta_button['target']) ?>" class="cta-btn hollow-btn "><?php echo esc_html($cta_button['title']) ?> <i class="fas fa-chevron-right"></i></a>
             <?php endif?>
         </div>
         <!-- PRACTICE SLIDER -->
@@ -58,10 +58,10 @@
                         
                         <li>
                             <div class="img-wrap">
-                                <img src="<?= esc_url($practice_areas_fields['slider_image']); ?>" alt="practice image">
+                                <img src="<?php echo esc_url($practice_areas_fields['slider_image']); ?>" alt="practice image">
                                 <div class="hover">
                                     <a href="<?php esc_url(the_permalink()); ?>" class="prac-name"><?php esc_html(the_title()); ?></a>
-                                    <p class="body-text"><?= $practice_areas_fields['slider_excerpt']; ?></p>
+                                    <p class="body-text"><?php echo $practice_areas_fields['slider_excerpt']; ?></p>
                                     <a href="<?php esc_url(the_permalink()); ?>">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                                 </div>
                             </div>
