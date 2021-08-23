@@ -216,11 +216,11 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "Page Hero\r\nTitle",
+                                    "default_value": "Page Hero Title",
                                     "placeholder": "",
                                     "maxlength": "",
                                     "rows": 2,
-                                    "new_lines": "br"
+                                    "new_lines": ""
                                 }
                             ]
                         }
@@ -2080,5 +2080,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1629478187
+    "modified": 1629718678
 }

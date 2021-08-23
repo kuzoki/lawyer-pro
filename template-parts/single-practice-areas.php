@@ -1,12 +1,12 @@
 <?php 
    $practice_content = get_field('practice_areas_setting');
 ?>
-<div class="hero hero-page" style="background: url(<?= $practice_content['single_page_background_hero'] ?>);">
+<div class="hero hero-page" style="background: url(<?= esc_url($practice_content['single_page_background_hero']) ?>);">
     <div class="bg-layer"></div>
     <div class="container">
         <div class="hero-content">
                 <p class="eyebrow">Practice Area</p>
-                <h2 class="hero-title mt-3"><?php if($title): echo $title; else:  echo get_the_title(); endif ?></h2>
+                <h2 class="hero-title mt-3"><?= esc_html(get_the_title())?></h2>
         </div>
     </div>
 </div>
@@ -56,7 +56,7 @@
                 
                     <img src="<?= $practice_content['featured_image_single_practice_page']?>" alt="practice Image">
                 <?php endif;?>
-                    <h3 class="sec-title"><?= get_the_title() ?></h3>   
+                    <h3 class="sec-title"><?= esc_html(get_the_title()) ?></h3>   
                     
                     <div class="body-text">
                         <?= $practice_content['description']?>
@@ -98,9 +98,9 @@
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="warp">
                         <?php if($attorneys_fields['about_page_image']):?>
-                            <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="attorney">
+                            <img src="<?= esc_url($attorneys_fields['about_page_image']) ?>" alt="attorney">
                         <?php else:?>
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/notfound.png" alt="attorney">
+                            <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="attorney">
                         <?php endif;?>  
                       
                             
@@ -108,9 +108,9 @@
                             <h3 class="name"><?= $attorneys_fields['global_info']['first_name'] ?><?= $attorneys_fields['global_info']['last_name'] ?></h3>
                             
                             <p class="role body-text text-capitalize">
-                                <?= $attorneys_fields['global_info']['specialty'] ?>
+                                <?= esc_html($attorneys_fields['global_info']['specialty']) ?>
                             </p>
-                            <a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                            <a href="<?php esc_url(the_permalink()); ?>" class="read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>

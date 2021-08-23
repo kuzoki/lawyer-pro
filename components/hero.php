@@ -11,18 +11,18 @@
    
 ?>
 
-<div class="hero position-relative" style="background-image: url(<?= $background_image ?>);">
+<div class="hero position-relative" style="background-image: url(<?= esc_url($background_image) ?>);">
     
     <div class="container">
         <div class="hero-content">
-            <p class="eyebrow"><?= $eyebrow; ?></p>
+            <p class="eyebrow"><?= esc_html($eyebrow); ?></p>
             <h2 class="hero-title my-3"><?= $title ?></h2>
             <p class="hero-title-underline">
                 <?= $tagline_text ?>
             </p>
             <?php 
                 if ($cta_hero): ?>
-                <a href="<?php echo $cta_hero['url']; ?>" class="cta-btn big-hero-btn" target="<?php echo $cta_hero['target']; ?>"><?php echo $cta_hero['title']; ?><i class="fas fa-chevron-right"></i></a>
+                <a href="<?= esc_url($cta_hero['url']); ?>" class="cta-btn big-hero-btn" target="<?= esc_attr($cta_hero['target']); ?>"><?= esc_html($cta_hero['title']); ?><i class="fas fa-chevron-right"></i></a>
             <?php endif; ?>
                        
 						

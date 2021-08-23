@@ -7,6 +7,6 @@
     
     <h3><?= get_field('contact_us_block_title_text', 'option')?></h3>
     <?php if($cta_button): ?>
-    <a href="<?= $cta_button['url'] ?>" class="cta-btn round-btn-secondary "><?= $cta_button['title'] ?></a>
+    <a href="<?= esc_url($cta_button['url']) ?>" class="cta-btn round-btn-secondary "><?= esc_html($cta_button['title']) ?></a>
      <?php endif; ?>   
 </div>

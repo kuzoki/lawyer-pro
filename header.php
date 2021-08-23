@@ -13,17 +13,17 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="<?php  bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="icon" href="<?= get_field('company_fav_icon', 'option') ?>">
+	<link rel="icon" href="<?= esc_url(get_field('company_fav_icon', 'option')) ?>">
 
 	<?php wp_head(); ?>
     
 </head>
 
 <body <?php body_class(); ?>>
-	
+<?php wp_body_open(); ?>
 	 <!-- HEADER SECTION -->
 	<header class="header">
         <div class="top-nav group" id="top-nav">
@@ -49,7 +49,7 @@
 						<div class="icon"><i class="fas fa-phone"></i></div>   
 						<p>
 							Free Consultation : 
-							<a class="tel" href="tel:<?= get_field( "main_phone_number", "option" ); ?>"><?= get_field( "main_phone_number", "option" ); ?></a> 
+							<a class="tel" href="tel:<?= esc_attr(get_field( "main_phone_number", "option" )); ?>"><?= esc_html(get_field( "main_phone_number", "option" )); ?></a> 
 						
 						</p>
 					</div>
@@ -77,7 +77,7 @@
 					<?php $cta_button = get_field('contact_us_block_cta_button', 'option'); ?>
 					
 					<?php if($cta_button): ?>
-						<a href="<?= $cta_button['url'] ?>" class="cta-btn round-btn-secondary display-none">Get Free Quote</a>
+						<a href="<?= esc_url($cta_button['url']) ?>" class="cta-btn round-btn-secondary display-none">Get Free Quote</a>
 					<?php endif; ?>   
 					
                     

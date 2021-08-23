@@ -52,14 +52,14 @@
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="warp">
                             <?php if($attorneys_fields['about_page_image']):?>
-                                <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="attorney">
+                                <img src="<?= esc_url($attorneys_fields['about_page_image']) ?>" alt="<?= esc_attr(the_title())?>">
                             <?php else:?>
-                                <img src="<?= get_template_directory_uri() ?>/assets/images/notfound.png" alt="attorney">
+                                <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="<?= esc_attr(the_title())?>">
                             <?php endif;?>    
                             <div class="text-warp">
-                                <h3 class="name"><?= $attorneys_fields['global_info']['first_name'] ?> <?= $attorneys_fields['global_info']['last_name'] ?></h3>
-                                <p class="role body-text"><?= $attorneys_fields['global_info']['specialty'] ?></p>
-                               <a href="<?php the_permalink(); ?>" class="read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                                <h3 class="name"><?= esc_html($attorneys_fields['global_info']['first_name']) ?> <?= esc_html($attorneys_fields['global_info']['last_name']) ?></h3>
+                                <p class="role body-text"><?= esc_html($attorneys_fields['global_info']['specialty']) ?></p>
+                               <a href="<?php esc_url(the_permalink()); ?>" class="read-more">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
                         </div>
                     </div>

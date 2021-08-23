@@ -2,7 +2,7 @@
 
         <div class="blog-sec sec group" id="blog-sec">
             <div class="container">
-                <h3 class="sec-title center"><?= get_sub_field('title_text')?></h3>
+                <h3 class="sec-title center"><?= esc_html(get_sub_field('title_text'))?></h3>
                 <div class="row">
                     <?php 
 
@@ -22,11 +22,11 @@
                     ?>       
                     <div class="col-lg-4 col-md-4">
                         <div class="single-post">
-                            <a href="<?php the_permalink(); ?>">
-                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="blog image" class='img-blog-home'>
+                            <a href="<?php esc_url(the_permalink()); ?>">
+                                <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID())); ?>" alt="blog image" class='img-blog-home'>
                             </a>
                             <div class="category-link my-2"><?= the_category();?></div>
-                            <a class="post-title mb-1" href="<?php the_permalink(); ?>" title="<?= get_the_title()?>"><?= wp_trim_words(get_the_title(),8,'..');?></a>
+                            <a class="post-title mb-1" href="<?php esc_url(the_permalink()); ?>" title="<?= esc_attr(get_the_title())?>"><?= wp_trim_words(get_the_title(),8,'..');?></a>
                             <div class="body-text date"><?php the_time('F j, Y');?> By <?= get_the_author() ?></div>
                         </div>
                     </div>

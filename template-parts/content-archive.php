@@ -37,11 +37,11 @@
 ?>
     
 <!-- Hero -->
-    <div class="hero hero-page" style="background: url(<?= get_field('background_image_hero_for_archive', 'option') ?>);">
+    <div class="hero hero-page" style="background: url(<?= esc_url(get_field('background_image_hero_for_archive', 'option')) ?>);">
         <div class="bg-layer"></div>
         <div class="container">
             <div class="hero-content">
-                <p class="eyebrow"><?= $sub_title;?></p>
+                <p class="eyebrow"><?= esc_html($sub_title);?></p>
                 <h2 class="hero-title mt-3"><?= $title;?></h2>
                 
             </div>
@@ -54,7 +54,7 @@
 <div class="sec blog--posts">
     <div class="container">
         <div class="row">
-            <div class="<?= $class_side;?>">
+            <div class="<?= esc_attr($class_side);?>">
                 <div class="row">
                     <?php 
             
@@ -62,13 +62,13 @@
                             while ( have_posts() ) {
                                 the_post(); 
                     ?>
-                        <div class="<?= $class_side_post;?> margin">
+                        <div class="<?= esc_attr($class_side_post);?> margin">
                             <div class="single-post">
-                                <a href="<?php the_permalink(); ?>">
-                                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="blog image" class='img-blog-home'>
+                                <a href="<?php esc_url(the_permalink()); ?>">
+                                    <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID())); ?>" alt="blog image" class='img-blog-home'>
                                 </a>
                                 <div class="category-link my-2"><?= the_category();?></div>
-                                <a class="post-title mb-1" href="<?php the_permalink(); ?>" title="<?= get_the_title()?>"><?= wp_trim_words(get_the_title(),8,'..');?></a>
+                                <a class="post-title mb-1" href="<?php esc_url(the_permalink()); ?>" title="<?= get_the_title()?>"><?= wp_trim_words(get_the_title(),8,'..');?></a>
                                 <div class="body-text date"><?php the_time('F j, Y');?> By <?= get_the_author() ?></div>
                             </div>
                         </div>

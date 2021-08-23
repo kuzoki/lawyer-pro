@@ -112,6 +112,9 @@
 .main-navbar .menu-item-has-children {
   position: relative;
 }
+.main-navbar .current-menu-item a {
+  color: var(--secondary-color) !important;
+}
 .main-navbar .sub-menu {
   display: flex;
   flex-direction: column;
@@ -292,13 +295,13 @@ footer a:hover {
   font-size: 13px;
   font-weight: 500;
   color: var(--text-color);
-/*   padding-top: 25px; */
+  /*   padding-top: 25px; */
 }
 
 @media (max-width: 768px) {
-	.copyright {
-		padding-top: 0;
-	}
+  .copyright {
+    padding-top: 0;
+  }
 }
 
 footer .logo {
@@ -317,15 +320,13 @@ footer .logo {
 }
 
 @media (max-width: 992px) {
-	.hero {
-		margin-top: 0px;
-	}
+  .hero {
+    margin-top: 0px;
+  }
 }
 
 .hero .hero-content {
   display: flex;
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
@@ -363,9 +364,9 @@ footer .logo {
 }
 
 @media (max-width: 992px) {
-	.hero-page .hero-content {
-		height: 70vh !important;
-	}
+  .hero-page .hero-content {
+    height: 70vh !important;
+  }
 }
 
 .hero-page {
@@ -1021,7 +1022,7 @@ footer .logo {
 .slide-content .body-text,
 .slide-content .read-more-btn {
   opacity: 0;
-  transform: translateY(-50);
+  /* transform: translateY(-50); */
 }
 .slide-image img {
   opacity: 0;
@@ -1142,14 +1143,13 @@ footer .logo {
   background-color: var(--default-color);
 }
 
-
 /* Blog Section */
 .blog-sec.sec {
-	padding-bottom: 70px !important;
+  padding-bottom: 70px !important;
 }
 
 .blog-sec .single-post img {
-	width: 100%;
+  width: 100%;
 }
 
 /* Banner CTA */
@@ -1159,14 +1159,14 @@ footer .logo {
 }
 
 .blue--block.my-5 {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 @media (max-width: 768px) {
-	.blue--block.my-5 {
-		margin-top: 30px !important;
-	}
+  .blue--block.my-5 {
+    margin-top: 30px !important;
+  }
 }
 
 .blue--block h3 {
@@ -1347,23 +1347,23 @@ footer .logo {
 }
 /* 12 - Blog Page */
 .blog .single-post {
-	margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .blog .single-post img {
-	width: 100%;
+  width: 100%;
 }
 
 .blog .sidebar.col-lg-4 {
-	margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .blog .sec.blog--posts {
-	padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .single-post .sec.single-post-block {
-	padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .category-link a {
@@ -1399,7 +1399,7 @@ footer .logo {
   color: var(--text-color);
   font-weight: 500;
   text-transform: capitalize;
-	margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 /* Team Grid */
@@ -1469,11 +1469,11 @@ footer .logo {
   transition: 0.2s ease;
 }
 .team-sec .row .col-12 {
-  	margin-bottom: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 .team-sec .row .col-12:last-child {
-  	margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .team-sec .row .col-12:nth-last-of-type(-n + 3) {
@@ -1570,34 +1570,34 @@ footer .logo {
 }
 
 .single-practice-areas .team-sec {
-	padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 /* 15 - Single Post Team */
 .single--post .card-col {
-	padding-right: 60px;
+  padding-right: 30px;
 }
 
 @media (max-width: 992px) {
-	.single--post .card-col {
-		padding-right: 12px;
-		margin-bottom: 50px;
-	}
+  .single--post .card-col {
+    padding-right: 12px;
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 575px) {
-	.single--post .card-col .col-sm-8.left {
-		text-align: center;
-		margin-bottom: 14px;
-	}
-	.single--post .card-col .col-sm-4.right ul {
-		justify-content: center;
-	}
+  .single--post .card-col .col-sm-8.left {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  .single--post .card-col .col-sm-4.right ul {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
-	.single-team .blue--block.my-5 {
-		margin-top: 0 !important;
-	}	
+  .single-team .blue--block.my-5 {
+    margin-top: 0 !important;
+  }
 }
 
 .blog--posts .margin {
@@ -1607,8 +1607,8 @@ footer .logo {
   margin-bottom: 0px;
 }
 .single-post .single-post-block img {
-  	width: 100%;
-	margin: 30px 0;
+  width: 100%;
+  margin: 30px 0;
 }
 .single--post .warp {
   background: var(--main-color);
@@ -1807,7 +1807,9 @@ textarea:focus {
   flex-direction: row;
 }
 .aut-meta img {
-  margin-right: 20px;
+  margin-right: 20px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   width: 100px !important;
   height: 100px;
   vertical-align: middle;
@@ -1819,6 +1821,9 @@ textarea:focus {
 }
 .sidebar-sec:last-of-type {
   margin-bottom: 0px;
+}
+.sidebar-sec .img-blog-home {
+  margin: 0 !important;
 }
 .side-cat {
   text-decoration: none;

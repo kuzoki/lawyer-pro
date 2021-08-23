@@ -6,9 +6,9 @@
      */
     $cta_button = get_sub_field('cta_button');      
 ?>
-<div class="faq-sec sec group" style='background:url(<?= the_sub_field('background_image') ?>)'>
+<div class="faq-sec sec group" style='background:url(<?= esc_url(the_sub_field('background_image')) ?>)'>
     <div class="container">
-        <h3 class="sec-title center"><?= the_sub_field('title_text') ?></h3>
+        <h3 class="sec-title center"><?= esc_html(the_sub_field('title_text')) ?></h3>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="questions-col">
@@ -32,7 +32,7 @@
 
                                 <div class="question" data-ques-nbr="<?= $id_q ?>">
                                     <p class="number" data-nbr="nbr<?= esc_attr( $faq->current_post + 01 );?>"><?php if($faq->current_post < 9){echo "0";}?><?= esc_attr( $faq->current_post + 01 );?></p>
-                                    <p><?= $faq_fields['question']; ?></p>
+                                    <p><?= esc_html($faq_fields['question']); ?></p>
                                 </div>
 
                             <?php 
@@ -75,7 +75,7 @@
                                 
                         <div class="more-questions">
                             <p><?= the_sub_field('sub_text') ?></p>
-                            <a href="<?= $cta_button['url'] ?>" class="cta-btn round-btn" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
+                            <a href="<?= esc_url($cta_button['url']) ?>" class="cta-btn round-btn" target="<?= esc_attr($cta_button['target']) ?>"><?= esc_html($cta_button['title']) ?></a>
                                    
                         </div>
                                 

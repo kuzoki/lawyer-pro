@@ -21,9 +21,9 @@
         <div class="row">
             <div class="col-lg-4 card-col">
                 <?php if($attorneys_fields['about_page_image']): ?>
-                    <img src="<?= $attorneys_fields['about_page_image'] ?>" alt="Attorney" class="single-member-img">
+                    <img src="<?= esc_url($attorneys_fields['about_page_image']) ?>" alt="<?= esc_attr(the_title())?>" class="single-member-img">
                 <?php else: ?> 
-                    <img src="<?= get_template_directory_uri() ?>/assets/images/notfound.png" alt="Attorney">
+                    <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/notfound.png" alt="Attorney">
                 <?php endif ?>     
                 <div class="warp">
                     <h2 class="name"><?php echo $global_info['first_name'].' '.$global_info['last_name'] ?></h2>
@@ -32,13 +32,13 @@
                         <div class="col-sm-8 left">
                             <ul>
                                 <?php if( $global_info['phone_number']): ?>
-                                    <li><i class="fas fa-phone"></i><a href="#"><?php echo $global_info['phone_number'] ?></a></li>
+                                    <li><i class="fas fa-phone"></i><a href="tel:<?= esc_html($global_info['phone_number']) ?>"><?= esc_html($global_info['phone_number']) ?></a></li>
                                 <?php endif; ?>
                                 <?php if( $global_info['email']): ?>
-                                    <li><i class="fas fa-envelope"></i><a href="#"><?php echo $global_info['email'] ?></a></li>
+                                    <li><i class="fas fa-envelope"></i><a href="mailto:<?= esc_attr($global_info['email']) ?>"><?= esc_html($global_info['email']) ?></a></li>
                                 <?php endif; ?>
                                 <?php if( $global_info['address']): ?>
-                                    <li><i class="fas fa-map-marker-alt"></i><?php echo $global_info['address'] ?></li>
+                                    <li><i class="fas fa-map-marker-alt"></i><?= esc_html($global_info['address']) ?></li>
                                 <?php endif; ?>
                                 
                             </ul>
@@ -47,7 +47,7 @@
                             <!-- Social Media -->
                             <ul>
                                 <?php $social_media = $global_info['social_media']; if( $social_media ): foreach( $social_media as $row ): ?> 
-                                 <li><a href="<?= $row['link']?>" target='_blank' ><?= $row['icon']?></a></li>
+                                 <li><a href="<?= esc_url($row['link'])?>" target='_blank' ><?= $row['icon']?></a></li>
                                 <?php  endforeach; endif;?>
                             </ul>
                             <!-- Pdf Link -->
@@ -101,8 +101,8 @@
                     <div class='row'>
                         <?php foreach( $appeared_on as $row ): ?>
                         <div class="col-4 block-col">
-                            <a href="<?= $row['link'] ?>" target="_blank" class="p-2 d-block seen-on">
-                                <img src="<?= $row['logo'] ?>" alt="seen on">
+                            <a href="<?= esc_url($row['link']) ?>" target="_blank" class="p-2 d-block seen-on">
+                                <img src="<?= esc_url($row['logo']) ?>" alt="seen on">
                             </a>
                         </div>
                         <?php endforeach; ?>
@@ -112,7 +112,7 @@
                     <?php  endif; ?>       
 
                 <?php if($attorneys_fields['pdf_cv']): ?>
-                    <a href="<?php echo $attorneys_fields['pdf_cv']?>" class='cta-btn hollow-btn'> Download <i class="far fa-file-pdf"></i></i></a>
+                    <a href="<?php echo esc_url($attorneys_fields['pdf_cv'])?>" class='cta-btn hollow-btn'> Download File <i class="far fa-file-pdf"></i></i></a>
                 <?php endif; ?>
                 
             </div>

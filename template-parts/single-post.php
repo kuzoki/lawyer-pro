@@ -18,7 +18,7 @@
 
 
 
-<div class="sec single-post-block">
+<div class="sec single-post-block" id="post-<?php the_ID(); ?>">
     <div class="container">
         <div class="row">
             <div class="<?= $class_side;?>">
@@ -32,9 +32,9 @@
                     <h3 class="in-title">About The Author</h3>
                     
                     <div class="aut-meta">
-                        <?=  get_avatar( get_the_author_email(), '80' ); ?>
+                        <?=  get_avatar( get_the_author_meta('email'), '80' ); ?>
                         <div>
-                            <p class="body-text"><?= the_author_description() ?></p>
+                            <p class="body-text"><?= the_author_meta('description') ?></p>
                         </div>
                     </div>
                 </div>    

@@ -9,7 +9,7 @@
 
     <!-- Testimonials -->
     
-    <div class="testimonials-sec sec" style='background-image: url(<?= $background ?>);'>
+    <div class="testimonials-sec sec" style='background-image: url(<?= esc_url($background) ?>);'>
         <div class="bg-layer"></div>
         <div class="container">
             <h3 class="sec-title center"><?= $title ?> </h3>
@@ -39,14 +39,14 @@
                                     <div class="tes-item">
                                         <div class="tes-img">
                                             <?php if($testimonials_fields['image_icon']): ?>
-                                                <img src="<?= $testimonials_fields['image_icon']; ?>" alt="person"/>
+                                                <img src="<?= esc_url($testimonials_fields['image_icon']); ?>" alt="person"/>
                                             <?php else: ?> 
-                                                <img src="<?= get_template_directory_uri() ?>/assets/images/client-icon.png" alt="Attorney">
+                                                <img src="<?= esc_url(get_template_directory_uri()) ?>/assets/images/client-icon.png" alt="Attorney">
                                             <?php endif ?>  
                                             <p class="quote-icon">“</p>
                                         </div>
                                         <div class="tes-text">
-                                            <p class="person-name"><?= $testimonials_fields['full_name']; ?></p>
+                                            <p class="person-name"><?= esc_html($testimonials_fields['full_name']); ?></p>
                                             <p class="testimonial">
                                                 <?= $testimonials_fields['what_the_say_about_us']; ?>
                                             </p>

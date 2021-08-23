@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="title-part">
-                    <p><?= $title ?></p>
+                    <p><?= esc_html($title) ?></p>
                 </div>
             </div>
             
@@ -27,7 +27,7 @@
                             
                                 foreach( $logos as $image ):
                         ?>           
-                             <div class="col-lg-4 mb-1"> <img src="<?= $image['image'] ?>" alt="badge">  </div>
+                             <div class="col-lg-4 mb-1"> <img src="<?= esc_url($image['image']) ?>" alt="badge">  </div>
                                 
                         <?php      
                                 endforeach;

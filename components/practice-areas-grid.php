@@ -15,7 +15,7 @@
     <!-- Practice Area Section Page -->
         <div class="team-sec sec">
             <div class="container">
-                <h3 class="sec-title"><?= get_sub_field('title_text')?></h3>
+                <h3 class="sec-title"><?= esc_html(get_sub_field('title_text'))?></h3>
                 <!-- Text Area -->
                 <?php if($add_paragraph_after_title == 'one'): ?>
                 <div class="col-12 body-text mb-5">
@@ -51,10 +51,10 @@
                     ?>
                     <div class="col-lg-4 col-md-6 col-12">
                         
-                        <img src="<?= $practice_field['featured_image'] ?>" class="mb-4" alt="Practice Area">
-                        <h3 class="in-title"><?php the_title(); ?></h3>
+                        <img src="<?= esc_url($practice_field['featured_image']) ?>" class="mb-4" alt="<?= esc_attr(the_title())?>">
+                        <h3 class="in-title"><?php esc_html(the_title()); ?></h3>
                         <p class="body-text mb-2"><?= wp_trim_words( $practice_field['description'], 8, '...' );?></p>
-                        <a href="<?php the_permalink(); ?>" class="read-more-btn" title="<?php the_title(); ?>">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <a href="<?php esc_url(the_permalink()); ?>" class="read-more-btn" title="<?php esc_attr(the_title()); ?>">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
                         
                     </div>
                         

@@ -27,7 +27,7 @@
                                     
                                     if(get_field( "company_logo", "option" )):
                                 ?> 
-                                    <a href="/"><img src="<?= get_field( "company_logo", "option" ); ?>" alt="logo"></a>
+                                    <a href="/"><img src="<?= esc_url(get_field( "company_logo", "option" )); ?>" alt="logo"></a>
                                 <?php 
                                     else: 
                                         if ( function_exists( 'the_custom_logo' ) ) {
@@ -49,7 +49,7 @@
                     <div class="col-lg-3 col-sm-4 col-6 text-center text-sm-start ">
                         <div class="item">
                            
-                            <p class="title">Company</p>
+                            <p class="title">Menu</p>
                             <?php
                                 wp_nav_menu(
                                     array(
@@ -132,7 +132,7 @@
                                     
                                     if(get_field( "trust_badge", "option" )):
                                 ?> 
-                                    <img src="<?= get_field( "trust_badge", "option" ); ?>" alt="trust-logo" class="trust-logo">
+                                    <img src="<?= esc_url(get_field( "trust_badge", "option" )); ?>" alt="trust-logo" class="trust-logo">
                                 <?php endif; ?>    
                             
                         </div>          

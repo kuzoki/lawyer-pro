@@ -23,12 +23,12 @@
             <div class="col-lg-6 col-12">
                     
                 <div class="about-img">
-                    <img src="<?= $image ?>" class='img-fluid' alt="about img">
+                    <img src="<?= esc_url($image) ?>" class='img-fluid' alt="about img">
                 </div>
             </div>
             <div class="col-lg-6 col-12">
                 <div class="about-text">
-                    <h3 class="sec-title"><?= $group_info['title']; ?></h3>
+                    <h3 class="sec-title"><?= esc_html($group_info['title']); ?></h3>
                     <?php 
                         // Default Choice
                         if($option_fields == 'text'): 
@@ -52,7 +52,7 @@
                         ?>           
                                  
                                 <li>
-                                    <div class="title"><?= $list['title'] ?></div>
+                                    <div class="title"><?= esc_html($list['title']) ?></div>
                                     <p class="body-text"><?= $list['description'] ?></p>
                                 </li>
                                 
@@ -73,7 +73,7 @@
 
         <div class="featured-sec mt-100 ">
             <!-- Featured Title -->               
-            <h3 class="sec-title"><?= $featured_field['title'];?></h3>
+            <h3 class="sec-title"><?= esc_html($featured_field['title']);?></h3>
             
             <?php if($featured_field['add_paragraph'] !== 'none'):?>
             <!-- Featured Paragraph -->        
@@ -109,11 +109,11 @@
                 <div class="col-lg-4 col-12 px-3">
                     <div class="single-feature d-flex">
                         <div class="feat-icon">
-                                <img src="<?= $list['icon'] ?>" alt="feature icon">
+                                <img src="<?= esc_url($list['icon']) ?>" alt="feature icon">
                         </div>
                             
                         <div>
-                            <p class="title"><?= $list['title'] ?></p>
+                            <p class="title"><?= esc_html($list['title']) ?></p>
                             <p class="body-text">
                                 <?= $list['description'] ?>
                             </p>
@@ -138,7 +138,7 @@
                         
                         foreach( $stat_lists as $stat_list ):
                 ?>
-                <div class="col-lg-3 col-sm-6 col-12 static"><span class="number"><?= $stat_list['number'] ?></span><span class="fact"><?= $stat_list['title'] ?></span></div>
+                <div class="col-lg-3 col-sm-6 col-12 static"><span class="number"><?= esc_html($stat_list['number']) ?></span><span class="fact"><?= esc_html($stat_list['title']) ?></span></div>
                 <?php 
                         endforeach;
                     endif;
